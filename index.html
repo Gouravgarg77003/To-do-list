@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./script.js"></script>
+
+    <link rel="stylesheet" href="./lindex.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 p-8">
+        <div class="bg-white grid grid-cols-1 h-max shadow overflow-hidden sm:rounded-md max-w-sm mx-auto mt-16">
+            <div class="grid h-max grid-rows-5 grid-cols-1 px-4">
+                <div class="flex font-bold text-xl justify-around my-4">
+                    Add Task Here
+                </div>
+                <div class="grid grid-cols-2 my-4"><label>Task heading</label><input id="name" class="border rounded-md" type="text"></div>
+                <div class="grid grid-cols-2 my-4"><label>Time</label><input id="time" class="border rounded-md"type="time"></div>
+                <div class="grid grid-cols-2 my-4"><label>Task Description</label><input id="desc" class="border rounded-md" type="text-box"></div>
+                <button id="submit" class="inline-block bg-red-500 rounded-full px-3 py-1 texts-sm font-semibold text-white mr-2 mb-2 hover:bg-red-700 cursor:pointer" onclick="addtask()">Add Task</button>
+            </div>
+        </div>
+        <div>
+            <button class="inline-block bg-green-500 rounded-full px-3 py-1 texts-sm font-semibold text-white mr-2 mb-2 hover:bg-green-700 cursor:pointer" onclick="getAllDataFromLocalStorage()">View All Tasks</button>
+            <ul id="list" class="bg-white shadow overflow-hidden sm:rounded-md max-w-sm mx-auto mt-16">
+            </ul>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</body>
+</html>
